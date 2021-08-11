@@ -1,0 +1,85 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <form method="POST" action="/admin/add-time-table" class="row g-3 needs-validation" novalidate>
+                <h2>Add Time Table</h2>
+            <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">First Period</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First Period" name="First-Period" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Second Period</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Second Period" name="Second-Period" required>
+            <div class="valid-feedback">
+                Looks good!
+             </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Third Period</label>
+            <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Enter Third Period" name="Third-Period" required>
+                <div class="invalid-feedback">
+                    Please provide Third Period
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Fourth Period</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Enter Fourth Period" name="Fourth-Period" required>
+            <div class="invalid-feedback">
+                Please provide Fourth Period
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom04" class="form-label">Fifth Period</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Enter Fifth Period" name="Fifth-Period" required>
+            <div class="invalid-feedback">
+                Please provide Fifth Period
+             </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom05" class="form-label">Sixth Period</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Enter Sixth Period" name="Sixth-Period" required>
+            <div class="invalid-feedback">
+                Please provide sixth Period
+            </div>
+        </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit Time Table</button>
+            </div>
+             </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
