@@ -23,15 +23,15 @@
                         <tr>
                           <th scope="row">{{@index}}</th>
                           <td>{{this.Day}}</td>
-                          <td>{{this.First-Period}}</td>
-                          <td>{{this.Second-Period}}</td>
-                          <td>{{this.Third-Period}}</td>
-                          <td>{{this.Fourth-Period}}</td>
-                          <td>{{this.Fifth-Period}}</td>
-                         <td>{{this.Sixth-Period}}</td>
+                          <td>{{this.FirstPeriod}}</td>
+                          <td>{{this.SecondPeriod}}</td>
+                          <td>{{this.ThirdPeriod}}</td>
+                          <td>{{this.FourthPeriod}}</td>
+                          <td>{{this.FifthPeriod}}</td>
+                         <td>{{this.SixthPeriod}}</td>
                          <td>
-                             <a class="btn btn-outline-primary" href="/edit-day">Edit</a>
-                             <a class="btn btn-outline-danger" href="/delete-day">Delete</a>
+                             <a class="btn btn-outline-primary" href="/admin/edit-day/{{this._id}}">Edit</a>
+                             <a class="btn btn-outline-danger" href="/admin/delete-day/{{this._id}}" onclick="return confirm('Are You Want To Delete {{Day}}')">Delete</a>
                          </td>
                        </tr>
                        {{/each }}

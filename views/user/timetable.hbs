@@ -5,6 +5,7 @@
                     <thead class="table-dark">
                         <tr>
                           <th scope="col">#</th>
+                          <th>Day</th>
                           <th scope="col">1st Period</th>
                           <th scope="col">2nd Period</th>
                           <th scope="col">3rd Period</th>
@@ -17,12 +18,13 @@
                         {{#each timetable}}
                         <tr>
                           <th scope="row">{{@index}}</th>
-                          <td>{{this.First-Period}}</td>
-                          <td>{{this.Second-Period}}</td>
-                          <td>{{this.Third-Period}}</td>
-                          <td>{{this.Fourth-Period}}</td>
-                          <td>{{this.Fifth-Period}}</td>
-                         <td>{{this.Sixth-Period}}</td>
+                          <td>{{this.Day}}</td>
+                          <td>{{this.FirstPeriod}}</td>
+                          <td>{{this.SecondPeriod}}</td>
+                          <td>{{this.ThirdPeriod}}</td>
+                          <td>{{this.FourthPeriod}}</td>
+                          <td>{{this.FifthPeriod}}</td>
+                         <td>{{this.SixthPeriod}}</td>
                        </tr>
                        {{/each }}
                   </tbody>

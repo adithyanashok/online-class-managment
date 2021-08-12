@@ -1,12 +1,12 @@
 <section>
     <div class="container">
         <div class="row">
-            <form method="POST" action="/admin/add-time-table" class="row g-3 needs-validation" novalidate>
+            <form method="POST" action="/admin/edit-day/{{timeTable._id}}" class="row g-3 needs-validation" novalidate>
                 <h2>Add Time Table</h2>
 
                 <div class="col-md-12">
                     <label for="validationCustom02" class="form-label">Day</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Day" name="Day" required>
+                    <input type="text" class="form-control" placeholder="Enter Day" id="validationCustom02" value="{{timeTable.Day}}" name="Day" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -14,7 +14,7 @@
 
             <div class="col-md-6">
             <label for="validationCustom01" class="form-label">First Period</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First Period" name="FirstPeriod" required>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First Period" value="{{timeTable.FirstPeriod}}"  name="FirstPeriod" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -22,7 +22,7 @@
 
         <div class="col-md-6">
             <label for="validationCustom02" class="form-label">Second Period</label>
-            <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Second Period" name="SecondPeriod" required>
+            <input type="text" class="form-control" id="validationCustom02" value="{{timeTable.SecondPeriod}}" placeholder="Enter Second Period" name="SecondPeriod" required>
             <div class="valid-feedback">
                 Looks good!
              </div>
@@ -31,7 +31,7 @@
         <div class="col-md-6">
             <label for="validationCustomUsername" class="form-label">Third Period</label>
             <div class="input-group has-validation">
-                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Enter Third Period" name="ThirdPeriod" required>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="{{timeTable.ThirdPeriod}}" placeholder="Enter Third Period" name="ThirdPeriod" required>
                 <div class="invalid-feedback">
                     Please provide Third Period
                 </div>
@@ -40,7 +40,7 @@
 
         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Fourth Period</label>
-            <input type="text" class="form-control" id="validationCustom03" placeholder="Enter Fourth Period" name="FourthPeriod" required>
+            <input type="text" class="form-control" id="validationCustom03" value="{{timeTable.FourthPeriod}}" placeholder="Enter Fourth Period" name="FourthPeriod" required>
             <div class="invalid-feedback">
                 Please provide Fourth Period
             </div>
@@ -48,7 +48,7 @@
 
         <div class="col-md-6">
             <label for="validationCustom04" class="form-label">Fifth Period</label>
-            <input type="text" class="form-control" id="validationCustom03" placeholder="Enter Fifth Period" name="FifthPeriod" required>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Enter Fifth Period" value="{{timeTable.FifthPeriod}}" name="FifthPeriod" required>
             <div class="invalid-feedback">
                 Please provide Fifth Period
              </div>
@@ -56,7 +56,7 @@
 
         <div class="col-md-6">
             <label for="validationCustom05" class="form-label">Sixth Period</label>
-            <input type="text" class="form-control" id="validationCustom05" placeholder="Enter Sixth Period" name="SixthPeriod" required>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Enter Sixth Period" value="{{timeTable.SixthPeriod}}" name="SixthPeriod" required>
             <div class="invalid-feedback">
                 Please provide sixth Period
             </div>
