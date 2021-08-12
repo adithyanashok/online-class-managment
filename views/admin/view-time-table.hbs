@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        <div class="row">
+                <div>
+                    <a class="btn btn-success mt-3" href="/admin/add-time-table/">Add Time Table</a>
+                 </div>
+                 <table class="table mt-5" style="border: 1px;">
+                    <thead class="table-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">1st Period</th>
+                          <th scope="col">2nd Period</th>
+                          <th scope="col">3rd Period</th>
+                          <th scope="col">4th Period</th>
+                          <th scope="col">5th Period</th>
+                          <th scope="col">6th Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each timetable}}
+                        <tr>
+                          <th scope="row">{{@index}}</th>
+                          <td>{{this.First-Period}}</td>
+                          <td>{{this.Second-Period}}</td>
+                          <td>{{this.Third-Period}}</td>
+                          <td>{{this.Fourth-Period}}</td>
+                          <td>{{this.Fifth-Period}}</td>
+                         <td>{{this.Sixth-Period}}</td>
+                       </tr>
+                       {{/each }}
+                  </tbody>
+              </table>
+        </div>
+    </div>
+</section>

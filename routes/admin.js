@@ -6,7 +6,13 @@ router.get('/', function(req, res, next) {
 res.render('admin/admin', { admin: true });
 });
 
-router.get("/add-time-table", (req, res) => {
+router.get("/view-time-table", (req, res) => {
+  studentHelpers.getAllTimeTable().then((timetable) => {
+    res.render('admin/view-time-table', { timetable })
+  })
+  
+})
+router.get('/add-time-table', (req, res) => {
   res.render('admin/add-time-table')
 })
 router.post('/add-time-table', (req, res) => {
