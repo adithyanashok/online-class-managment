@@ -59,5 +59,20 @@ module.exports={
                 resolve()
             })
         })
+    },
+
+    addAttendence: (attendence) => {
+        return new Promise((resolve, reject) => {
+            db.get().collection(collection.ATTENDENCE_COLLECTION).insertOne(attendence).then((data) => {
+                console.log(data);
+                resolve(data)
+            })
+        })
+    },
+    getAllAttendence: () => {
+        return new Promise(async(resolve, reject) => {
+            let attendence = await db.get().collection(collection.ATTENDENCE_COLLECTION).find().toArray()
+            resolve(attendence)
+        })
     }
 }

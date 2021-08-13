@@ -23,17 +23,17 @@ router.get('/timetable', verifyLogin, (req, res) => {
     res.render('user/timetable', { timetable, student })
   })
 })
-router.get('/view-student', verifyLogin, (req, res) => {
+router.get('/view-student', (req, res) => {
   signupHelpers.getAllStudents().then((students) => {
-    var student = req.session.student
-    res.render('admin/view-student', {students, admin:true, student})
+    
+    res.render('admin/view-student', {students, admin:true})
   })
   
 })
 
-router.get('/add-student',verifyLogin, (req, res) => {
-  var student = req.session.student
-  res.render('admin/add-student', {admin: true, student})
+router.get('/add-student', (req, res) => {
+  
+  res.render('admin/add-student', {admin: true})
 })
 router.post('/add-student', (req, res) => {
   console.log(req.body);
@@ -61,5 +61,23 @@ router.get("/logout", (req, res) => {
   req.session.destroy()
   res.redirect("/")
 })
+
+router.get('/attendence', verifyLogin, (req, res) => {
+  studentHelpers.getAllAttendence().then((attendence) => {
+    var student = req.session.student
+    res.render('user/attendence', {student})
+  })
+  
+})
+
+router.post('/attendence', (req, res) => {
+  console.log(req.body);
+  studentHelpers.addAttendence(req.body).then((response) => {
+    res.redirect('/')
+  })
+    
+  
+})
+
 
 module.exports = router;

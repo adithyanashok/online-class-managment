@@ -40,4 +40,10 @@ router.post('/edit-day/:id', (req, res) => {
     res.redirect('/admin/view-time-table')
   })
 })
+router.get('/admin-attendence', (req, res) => {
+  studentHelpers.getAllAttendence().then((attendence) => {
+    res.render('admin/admin-attendence', { attendence, admin: true })
+  })
+ 
+})
 module.exports = router;

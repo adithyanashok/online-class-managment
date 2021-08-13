@@ -1,0 +1,13 @@
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <h1>Attendence Sheet</h1>
+            <div class="admin-attendence-space">
+                {{#each attendence}}
+                <p>Name: {{this.Name}}</p><hr>
+                <h2>{{this.attendence}}</h2><hr>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
