@@ -1,3 +1,4 @@
 module.exports = {
-    TIMETABLE_COLLECTION:'timetable'
+    TIMETABLE_COLLECTION:'timetable',
+    STUDENT_COLLECTION:'students'
 }
