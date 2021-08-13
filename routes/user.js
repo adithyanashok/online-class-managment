@@ -12,17 +12,32 @@ router.get('/timetable', (req, res) => {
   })
 })
 router.get('/view-student', (req, res) => {
-  res.render('admin/view-student')
+  signupHelpers.getAllStudents().then((students) => {
+    res.render('admin/view-student', {students, admin:true})
+  })
+  
 })
 
 router.get('/add-student', (req, res) => {
-  res.render('admin/add-student')
+  res.render('admin/add-student', {admin: true})
 })
 router.post('/add-student', (req, res) => {
   console.log(req.body);
   signupHelpers.addStudent(req.body).then((response) => {
-    res.render('admin/view-student')
+    res.render('admin/add-student', {admin:true})
   })
 
+})
+router.get('/login', (req, res) => {
+  res.render('admin/login')
+})
+router.post('/login', (req, res) => {
+  signupHelpers.studentsLogin(req.body).then((response) => {
+    if(response.status){
+      res.redirect("/")
+    } else {
+      res.redirect('/login')
+    }
+  })
 })
 module.exports = router;

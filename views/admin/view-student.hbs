@@ -2,33 +2,28 @@
     <div class="container">
         <div class="row">
             <a class="btn btn-success mt-3" href="/add-student">Add Student</a>
-            <table class="table mt-5">
-                <thead>
+            <table class="table mt-5 table-bordered ">
+                <thead class="table-warning">
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Father Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Student Id</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {{#each students}}
                     <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th  scope="row">{{@index}}</th>
+                    <td>{{this.StudentName}}</td>
+                    <td>{{this.FatherName}}</td>
+                    <td>{{this.Address}}</td>
+                    <td>{{this.Mobile}}</td>
+                    <td>{{this.IdNumber}}</td>
                     </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
