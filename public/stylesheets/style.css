@@ -1,7 +1,8 @@
 .add-student-space {
-    width: auto;
+    width: 400px;
     align-items: center;
     margin: auto;
-    border: 1px solid black;
     padding: 10px;
+    box-shadow: 0 40px 80px 0 rgb(85, 81, 81), 0 6px 20px 0 rgb(201, 191, 191);
+    border-radius: 15px;
 }
